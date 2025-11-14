@@ -52,6 +52,7 @@
     <addaction name="actOpen"/>
     <addaction name="actSave"/>
     <addaction name="actSaveAs"/>
+    <addaction name="separator"/>
     <addaction name="actExit"/>
    </widget>
    <widget class="QMenu" name="menu_E">
@@ -63,6 +64,10 @@
     <addaction name="actCut"/>
     <addaction name="actCopy"/>
     <addaction name="actPaste"/>
+    <addaction name="actFind"/>
+    <addaction name="actReplace"/>
+    <addaction name="separator"/>
+    <addaction name="actSelectAll"/>
    </widget>
    <widget class="QMenu" name="menu_O">
     <property name="title">
@@ -71,18 +76,23 @@
     <addaction name="actFont"/>
     <addaction name="actLine"/>
     <addaction name="actWrap"/>
+    <addaction name="actionFontColor"/>
+    <addaction name="separator"/>
+    <addaction name="actFontBackgroundcolor"/>
+    <addaction name="actEditorBackgroundColor"/>
    </widget>
    <widget class="QMenu" name="menu_V">
     <property name="title">
      <string>查看(&amp;V)</string>
     </property>
-    <addaction name="actFind"/>
-    <addaction name="actReplace"/>
+    <addaction name="actToolBar"/>
+    <addaction name="actStatusBar"/>
    </widget>
    <widget class="QMenu" name="menu_H">
     <property name="title">
      <string>帮助(&amp;H)</string>
     </property>
+    <addaction name="actAbout"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_E"/>
@@ -354,7 +364,42 @@
      <normaloff>:/image/line.svg</normaloff>:/image/line.svg</iconset>
    </property>
    <property name="text">
-    <string>符号(&amp;L)</string>
+    <string>显示行号(&amp;L)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actAbout">
+   <property name="text">
+    <string>关于(&amp;A)</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionFontColor">
+   <property name="text">
+    <string>字体颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actFontBackgroundcolor">
+   <property name="text">
+    <string>字体背景颜色</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
+   </property>
+  </action>
+  <action name="actEditorBackgroundColor">
+   <property name="text">
+    <string>编辑器背景颜色</string>
    </property>
    <property name="menuRole">
     <enum>QAction::MenuRole::NoRole</enum>
