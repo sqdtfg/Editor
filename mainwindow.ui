@@ -297,6 +297,9 @@
    </property>
   </action>
   <action name="actWrap">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/image/wrap.svg</normaloff>:/image/wrap.svg</iconset>
@@ -309,6 +312,9 @@
    </property>
   </action>
   <action name="actToolBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/image/tool.svg</normaloff>:/image/tool.svg</iconset>
@@ -321,6 +327,9 @@
    </property>
   </action>
   <action name="actStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="res.qrc">
      <normaloff>:/image/status.svg</normaloff>:/image/status.svg</iconset>

@@ -35,6 +35,32 @@ private slots:
 
     void on_textEdit_textChanged();
 
+    void on_actUndo_triggered();
+
+    void on_actCut_triggered();
+
+    void on_actCopy_triggered();
+
+    void on_actPaste_triggered();
+
+    void on_actRedo_triggered();
+
+    void on_textEdit_undoAvailable(bool b);
+
+    void on_textEdit_copyAvailable(bool b);
+
+    void on_textEdit_redoAvailable(bool b);
+
+    void on_actionFontColor_triggered();
+
+    void on_actFontBackgroundcolor_triggered();
+
+    void on_actEditorBackgroundColor_triggered();
+
+    void on_actWrap_triggered();
+
+    void on_actFont_triggered();
+
 private:
     Ui::MainWindow *ui;
 
