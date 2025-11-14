@@ -48,6 +48,9 @@ MainWindow::MainWindow(QWidget *parent)
 
         ui->actWrap->setChecked(true);
     }
+
+    ui->actToolBar->setChecked(true);
+    ui->actStatusBar->setChecked(true);
 }
 
 MainWindow::~MainWindow()
@@ -297,6 +300,36 @@ void MainWindow::on_actFont_triggered()
 
     if(ok){
         ui->textEdit->setFont(font);
+    }
+}
+
+
+void MainWindow::on_actStatusBar_triggered()
+{
+    bool visible = ui->statusbar->isVisible();
+    ui->statusbar->setVisible(!visible);
+    ui->actStatusBar->setChecked(!visible);
+}
+
+
+void MainWindow::on_actToolBar_triggered()
+{
+    bool visible = ui->toolBar->isVisible();
+    ui->toolBar->setVisible(!visible);
+    ui->actToolBar->setChecked(!visible);
+}
+
+
+void MainWindow::on_actSelectAll_triggered()
+{
+    ui->textEdit->selectAll();
+}
+
+
+void MainWindow::on_actExit_triggered()
+{
+    if(userEditConfirmed()){
+        exit(0);
     }
 }
 
