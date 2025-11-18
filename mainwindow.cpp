@@ -67,7 +67,7 @@ void MainWindow::on_actAbout_triggered()
 
 void MainWindow::on_actFind_triggered()
 {
-    FindDialog dig;
+    FindDialog dig(this, ui->textEdit);
     dig.exec();
 }
 
