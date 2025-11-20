@@ -21,6 +21,9 @@ void FindDialog::on_btFindNext_clicked()
 {
     QString target = ui->findText->text();
 
+    if(target == "" || pTextEdit == nullptr)
+        return;
+
     QString text = pTextEdit->toPlainText();
     QTextCursor c = pTextEdit->textCursor();
     int index = -1;
